@@ -46,4 +46,5 @@ Requirements
  * collectd
  * python
  * dbus
+ * python-dbus
  * udisks2

@@ -133,8 +133,8 @@ def dispatch_value(value, type, type_instance=None, plugin_instance=None):
 
 def is_ata_updated(properties):
     return properties['SmartSupported'] and \
-           properties['SmartEnabled'] and \
-           properties['SmartUpdated']
+        properties['SmartEnabled'] and \
+        properties['SmartUpdated']
 
 
 def read_ata_temperature(properties):
@@ -204,9 +204,9 @@ def plugin_read():
             elif retries > 0:
                 collectd.info('Connected to system dbus '
                               'after %d retry.' % retries)
-            drives = [m.groupdict() for m in
-                        [re_drive.match(path) for path in objects.keys()]
-                     if m]
+            drives = [m.groupdict() for m in [
+                      re_drive.match(path) for path in objects.keys()]
+                      if m]
             for drive in drives:
                 if selected_drive_ids:
                     if ignore_selected:
